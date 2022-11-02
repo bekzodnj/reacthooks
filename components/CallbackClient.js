@@ -91,10 +91,10 @@ const Callback = ({}) => {
           </SyntaxHighlighter>
         </div>
         <p className='mb-4'>
-          This is useful when doing the component's props check to skip
-          rendering (aka React.memo). Because every time a component re-renders,
-          its functions get recreated. useCallback ensures that the function
-          instance will be the same ("referential equality").
+          This is useful when doing the props check to skip rendering (aka
+          React.memo). Because every time a component re-renders, its functions
+          get recreated. useCallback ensures that the function instance will be
+          the same (aka referential equality).
         </p>
 
         <div className='mb-4'>
@@ -132,7 +132,7 @@ const WithCallback = ({ checked }) => {
     return fibonacci(n - 1) + fibonacci(n - 2);
   };
 
-  const fibonacciCallback = useCallback(fibonacci, [num, fibonacci]);
+  const fibonacciCallback = useCallback(fibonacci, [num]);
 
   const infoDescriptionBox = checked ? (
     <p className={'font-normal mb-5 text-gray-400'}>
