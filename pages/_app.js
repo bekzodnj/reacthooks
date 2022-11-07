@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar';
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <main className='min-h-screen bg-darknightblue text-white'>
+      <main className='min-h-screen bg-darknightblue text-white pb-12'>
         <Navbar />
         <Component {...pageProps} />
       </main>

@@ -50,6 +50,7 @@ function State() {
   }`;
 
   return (
+    // INTERACTIVE
     <div className='grid grid-cols-1 sm:grid-cols-2'>
       <section className='border border-sky-900 p-2'>
         <h2 className='font-mono text-xl mb-2'>useState example</h2>
@@ -79,6 +80,7 @@ function State() {
         )}
       </section>
 
+      {/* TUTORIAL */}
       <section className='overflow-x-scroll p-2'>
         <div className=''>
           <h2 className='font-mono text-xl'>useState</h2>
