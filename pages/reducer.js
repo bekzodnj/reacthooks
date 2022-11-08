@@ -111,7 +111,7 @@ const Reducer = () => {
 
   return (
     <div className='grid grid-cols-1 sm:grid-cols-2'>
-      <section className='p-2'>
+      <section className='border border-sky-900 p-2'>
         <h2 className='font-mono text-xl'>useReducer</h2>
 
         <div
@@ -124,12 +124,12 @@ const Reducer = () => {
           <div className={'p-2 basis-1/2'}>
             <p
               className={
-                'text-2xl ' + (gemCount === 100 && 'text-sky-400 font-semibold')
+                'text-xl ' + (gemCount === 100 && 'text-sky-400 font-semibold')
               }
             >
-              <span className='inline-block w-8'>{gemCount}</span> / 100
+              <span className='inline-block'>{gemCount} / 100</span>
               <span
-                className='text-4xl inline-block p-2'
+                className='text-3xl inline-block p-2'
                 role='img'
                 aria-label='gem'
               >
@@ -138,13 +138,13 @@ const Reducer = () => {
             </p>
             <p
               className={
-                'text-2xl ' +
+                'text-xl ' +
                 (coinCount === 100 && 'text-orange-400 font-semibold')
               }
             >
-              <span className='inline-block w-8'>{coinCount}</span> / 100
+              <span className='inline-block'>{coinCount} / 100</span>
               <span
-                className='text-4xl inline-block p-2'
+                className='text-3xl inline-block p-2'
                 role='img'
                 aria-label='coin'
               >
@@ -154,13 +154,13 @@ const Reducer = () => {
 
             <p
               className={
-                'text-2xl ' +
+                'text-xl ' +
                 (starCount === 100 && 'text-yellow-400 font-semibold')
               }
             >
-              <span className='inline-block w-8'>{starCount}</span> / 100
+              <span className='inline-block'>{starCount} / 100</span>
               <span
-                className='text-4xl inline-block p-2'
+                className='text-3xl inline-block p-2'
                 role='img'
                 aria-label='watermelon'
               >
@@ -246,7 +246,7 @@ const Reducer = () => {
           <div className='flex space-x-1 mb-1'>
             <button
               type='button'
-              className='p-2 bg-orange-500 rounded-md hover:bg-blue-800 focus:ring-2 focus:ring-blue-300 font-medium  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 flex justify-center items-center'
+              className='p-2 bg-blue-700 rounded-md hover:bg-blue-800 focus:ring-2 focus:ring-blue-300 font-medium  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 flex justify-center items-center'
               onClick={() => dispatch({ type: ActionKind.INCREASE_STAR })}
             >
               Increase +

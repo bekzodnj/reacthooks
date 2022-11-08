@@ -149,8 +149,9 @@ const WithMemo = () => {
         <span role='img' aria-label='bulb'>
           💡
         </span>{' '}
-        useMemo enabled - the theme toggle does not cause the recalculation of
-        the fib value.
+        useMemo enabled - the dark mode toggle does not cause the recalculation
+        of the value. The fib value is only recalculated when the number
+        changes.
       </p>
       <div className='space-x-2 mb-4'>
         <span>{isDarkMode ? 'Dark' : 'Light'} mode on</span>
@@ -223,9 +224,9 @@ const WithoutMemo = () => {
         <span role='img' aria-label='bulb'>
           💡
         </span>
-        useMemo disabled - if the num value is big enough, the theme toggling
-        also causes the lag. Because without memoization, the value will be
-        recalculated on each render.
+        useMemo disabled - try to increment value first, then toggle the dark
+        mode switch. It may cause a lag. Because without memoization, on every
+        state change, the value will be recalculated.
       </p>
       <div className='space-x-2 mb-4'>
         <span>{isDarkMode ? 'Dark' : 'Light'} mode on</span>

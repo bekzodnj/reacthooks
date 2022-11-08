@@ -118,6 +118,7 @@ const Effect = ({}) => {
 const EffectExample = () => {
   return (
     <div id='boxWrap' className='transition-colors p-3'>
+      <p className='font-mono'>(Example shows browser API + useEffect hook)</p>
       <LongList />
       <Box />
       <LongList />
@@ -145,13 +146,14 @@ const Box = () => {
 
     const observe = new IntersectionObserver((entries) => {
       const entry = entries[0];
-
-      if (entry.isIntersecting) {
-        //console.log('Box is visible');
-        document.getElementById('boxWrap').style.backgroundColor = '#d6593a';
-      } else {
-        //console.log('Box is not visible');
-        document.getElementById('boxWrap').style.backgroundColor = '#072448';
+      if (document.getElementById('boxWrap')) {
+        if (entry.isIntersecting) {
+          //console.log('Box is visible');
+          document.getElementById('boxWrap').style.backgroundColor = '#d6593a';
+        } else {
+          //console.log('Box is not visible');
+          document.getElementById('boxWrap').style.backgroundColor = '#072448';
+        }
       }
     });
 
