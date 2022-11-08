@@ -1,9 +1,9 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import { useReducer } from 'react';
 import { CodeEditor, CodeComment } from '../components/common/CodeEditor';
-
 import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { oneDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import Head from 'next/head';
 
 const codeString = `const initialState = { count: 50 };
 
@@ -111,6 +111,12 @@ const Reducer = () => {
 
   return (
     <div className='grid grid-cols-1 sm:grid-cols-2'>
+      <Head>
+        <title>useReducer - React Hook</title>
+        <meta name='description' content='useReducer example' />
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
+
       <section className='border border-sky-900 p-2'>
         <h2 className='font-mono text-xl'>useReducer</h2>
 

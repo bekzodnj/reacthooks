@@ -80,6 +80,16 @@ function Navbar() {
         <Link href='/callback'>useCallback</Link>
       </li>
 
+      <li
+        className={
+          router.pathname == '/'
+            ? activeClassName
+            : 'py-5 hover:opacity-70 list-none'
+        }
+      >
+        <Link href='/'>about</Link>
+      </li>
+
       {/* @TODO - layout effect */}
       {/* <li
         className={

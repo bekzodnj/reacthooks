@@ -11,16 +11,24 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </main>
       <footer className={styles.footer}>
+        <p className='flex space-x-1'>
+          <span>Powered by:</span>
+          <a
+            href='https://vercel.com'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='underline'
+          >
+            Next.js
+          </a>
+        </p>
         <a
-          href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
+          href='https://github.com/bekzodnj/reacthooks'
+          rel='noreferrer noopener'
+          className='underline'
         >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src='/vercel.svg' alt='Vercel Logo' width={72} height={16} />
-          </span>
-        </a>
+          github
+        </a>{' '}
       </footer>
     </>
   );

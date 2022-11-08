@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react';
 import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { oneDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import Head from 'next/head';
 
 const MEMO_CODE_STRING = `const memoizedValue = useMemo(func, dependenciesArr);
 `;
@@ -53,6 +54,11 @@ const Memo = () => {
 
   return (
     <>
+      <Head>
+        <title>useMemo - React Hook</title>
+        <meta name='description' content='useMemo example' />
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
       {/* INTERACTIVE */}
       <div className='grid grid-cols-1 sm:grid-cols-2'>
         <section className='border border-sky-900 p-2'>

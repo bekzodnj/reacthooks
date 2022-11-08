@@ -48,6 +48,12 @@ const FibonacciComponent = memo(({ fibonacci, num }) => {
 const Callback = ({}) => {
   const [checked, setChecked] = useState(false);
 
+  useEffect(() => {
+    if (document) {
+      document.title = 'useCallback() - React Hooks';
+    }
+  }, []);
+
   return (
     <div className='grid grid-cols-1 sm:grid-cols-2'>
       {/* INTERACTIVE */}

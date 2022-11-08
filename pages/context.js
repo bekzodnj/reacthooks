@@ -1,6 +1,7 @@
 import { useState, createContext, useContext } from 'react';
 import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { oneDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import Head from 'next/head';
 
 const LanguageContext = createContext({
   languageCode: '',
@@ -52,6 +53,12 @@ function Card() {
 const Context = () => {
   return (
     <div className='grid grid-cols-1 sm:grid-cols-2'>
+      <Head>
+        <title>useContext - React Hook</title>
+        <meta name='description' content='useContext example' />
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
+
       <section className='border border-sky-900 p-2'>
         {/* Interactive */}
         <h2 className='font-mono text-xl mb-2'>useContext example</h2>

@@ -1,7 +1,7 @@
 import { useState } from 'react';
-
 import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { oneDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import NextHead from '../components/NextHead';
 
 const useStateCodeString = `const [fruit, setFruit] = useState(null);`;
 const FruitComponentCodeString = `// ...
@@ -50,8 +50,9 @@ function State() {
   }`;
 
   return (
-    // INTERACTIVE
     <div className='grid grid-cols-1 sm:grid-cols-2'>
+      <NextHead hookName='useState' />
+
       <section className='border border-sky-900 p-2'>
         <h2 className='font-mono text-xl mb-2'>useState example</h2>
         <h3 className='text-lg'>Select your favorite fruit:</h3>

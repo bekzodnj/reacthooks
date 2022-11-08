@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react';
 import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { oneDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import NextHead from '../components/NextHead';
 
 const EFFECT_HOOK_EXAMPLE_STRING = `export default function Box() {
   const ref = useRef(null);
@@ -53,6 +54,8 @@ useEffect(() => {
 const Effect = ({}) => {
   return (
     <div className='grid grid-cols-1 sm:grid-cols-2'>
+      <NextHead hookName='useEffect' />
+
       {/* INTERACTIVE */}
       <section className='border border-sky-900 p-2'>
         <h2 className='font-mono text-xl'>useEffect example</h2>
@@ -66,7 +69,7 @@ const Effect = ({}) => {
         <h2 className='font-mono text-xl'>useEffect</h2>
         <div className='mb-4'>
           <p className='mb-2'>
-            useEffect lets you synchronize a component with an external system.{' '}
+            useEffect lets you synchronize a component with an external system{' '}
             <a
               href='https://beta.reactjs.org/apis/react/useEffect'
               target='_blank'

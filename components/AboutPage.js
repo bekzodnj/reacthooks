@@ -26,6 +26,25 @@ export const AboutPage = () => {
         >
           React APIs - React Beta Docs
         </a>
+
+        <p className='mt-7'>
+          Developed by{' '}
+          <a
+            href='https://github.com/bekzodnj'
+            rel='noreferrer noopener'
+            className='underline'
+          >
+            bekzodnj (github)
+          </a>{' '}
+          /{' '}
+          <a
+            href='https://twitter.com/bekzodnj'
+            rel='noreferrer noopener'
+            className='underline'
+          >
+            twitter
+          </a>
+        </p>
       </div>
     </>
   );
