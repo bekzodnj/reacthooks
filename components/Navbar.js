@@ -9,86 +9,89 @@ import { useRouter } from 'next/router';
 function Navbar() {
   const router = useRouter();
   return (
-    <nav className='px-4 bg-bluerose text-white bold flex overflow-x-scroll space-x-5 text-xl '>
-      <li
-        className={
-          router.pathname == '/state'
-            ? activeClassName
-            : 'py-5 hover:opacity-70 list-none'
-        }
-      >
-        <Link href='/state'>useState</Link>
-      </li>
+    <nav className='px-5 bg-bluerose text-white bold text-xl overflow-x-scroll flex space-x-10 sm:justify-between'>
+      <ul className='flex space-x-5'>
+        <li
+          className={
+            router.pathname == '/state'
+              ? activeClassName
+              : 'py-5 hover:opacity-70 list-none'
+          }
+        >
+          <Link href='/state'>useState</Link>
+        </li>
 
-      <li
-        className={
-          router.pathname == '/effect'
-            ? activeClassName
-            : 'py-5 hover:opacity-70 list-none'
-        }
-      >
-        <Link href='/effect'>useEffect</Link>
-      </li>
+        <li
+          className={
+            router.pathname == '/effect'
+              ? activeClassName
+              : 'py-5 hover:opacity-70 list-none'
+          }
+        >
+          <Link href='/effect'>useEffect</Link>
+        </li>
 
-      <li
-        className={
-          router.pathname == '/context'
-            ? activeClassName
-            : 'py-5 hover:opacity-70 list-none'
-        }
-      >
-        <Link href='/context'>useContext</Link>
-      </li>
+        <li
+          className={
+            router.pathname == '/context'
+              ? activeClassName
+              : 'py-5 hover:opacity-70 list-none'
+          }
+        >
+          <Link href='/context'>useContext</Link>
+        </li>
 
-      <li
-        className={
-          router.pathname == '/ref'
-            ? activeClassName
-            : 'py-5 hover:opacity-70 list-none'
-        }
-      >
-        <Link href='/ref'>useRef</Link>
-      </li>
+        <li
+          className={
+            router.pathname == '/ref'
+              ? activeClassName
+              : 'py-5 hover:opacity-70 list-none'
+          }
+        >
+          <Link href='/ref'>useRef</Link>
+        </li>
 
-      <li
-        className={
-          router.pathname == '/reducer'
-            ? activeClassName
-            : 'py-5 hover:opacity-70 list-none'
-        }
-      >
-        <Link href='/reducer'>useReducer</Link>
-      </li>
+        <li
+          className={
+            router.pathname == '/reducer'
+              ? activeClassName
+              : 'py-5 hover:opacity-70 list-none'
+          }
+        >
+          <Link href='/reducer'>useReducer</Link>
+        </li>
 
-      <li
-        className={
-          router.pathname == '/memo'
-            ? activeClassName
-            : 'py-5 hover:opacity-70 list-none'
-        }
-      >
-        <Link href='/memo'>useMemo</Link>
-      </li>
+        <li
+          className={
+            router.pathname == '/memo'
+              ? activeClassName
+              : 'py-5 hover:opacity-70 list-none'
+          }
+        >
+          <Link href='/memo'>useMemo</Link>
+        </li>
 
-      <li
-        className={
-          router.pathname == '/callback'
-            ? activeClassName
-            : 'py-5 hover:opacity-70 list-none'
-        }
-      >
-        <Link href='/callback'>useCallback</Link>
-      </li>
-
-      <li
-        className={
-          router.pathname == '/'
-            ? activeClassName
-            : 'py-5 hover:opacity-70 list-none'
-        }
-      >
-        <Link href='/'>about</Link>
-      </li>
+        <li
+          className={
+            router.pathname == '/callback'
+              ? activeClassName
+              : 'py-5 hover:opacity-70 list-none'
+          }
+        >
+          <Link href='/callback'>useCallback</Link>
+        </li>
+      </ul>
+      <div>
+        <li
+          className={
+            router.pathname == '/'
+              ? activeClassName
+              : 'py-5 hover:opacity-70 list-none underline underline-offset-8 decoration-indigo-500'
+          }
+        >
+          <Link href='/'>about</Link>
+        </li>
+      </div>
 
       {/* @TODO - layout effect */}
       {/* <li
