@@ -2,10 +2,17 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import '../styles/globals.css';
 import Navbar from '../components/Navbar';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <Head>
+        <meta
+          name='google-site-verification'
+          content='CuB3GSVj1YcjFw3B750j7wfKdPMMGR6YE08lLBywqZw'
+        />
+      </Head>
       <main className='min-h-screen bg-darknightblue text-white pb-12'>
         <Navbar />
         <Component {...pageProps} />
